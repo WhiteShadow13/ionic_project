@@ -7,12 +7,12 @@ import { Category } from '../classes/category/category';
   styleUrls: ['./categories.page.scss'],
 })
 export class CategoriesPage implements OnInit {
-  list: Category[]
+  categories: Category[]
   
   constructor() { }
 
   ngOnInit() {
-    this.list = [new Category(1, "Ecole", "Test")];
+    this.categories = [new Category(1, "Ecole", "Test")];
   }
 
 }
