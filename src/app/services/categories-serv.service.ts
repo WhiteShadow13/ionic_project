@@ -27,6 +27,14 @@ export class CategoriesServService {
     return findCAtegory;
   }
 
+  postCategory(newCategory: Category) {
+    this.categories.forEach((category, index) => {
+      if (category.id == newCategory.id) {
+        this.categories[index] = newCategory;
+      }
+    });
+  }
+
   deleteCategory(id: number) {
     this.categories.forEach((category, index) => {
       if (category.id === id) {

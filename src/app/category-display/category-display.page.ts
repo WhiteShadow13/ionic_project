@@ -21,6 +21,10 @@ export class CategoryDisplayPage implements OnInit {
     this.category = this.categoriesServ.getCategory(this.categoryId);
   }
 
+  modify(id: number) {
+    this.router.navigate(['/category-modify', { id: id }]);
+  }
+  
   delete(id: number) {
     this.categoriesServ.deleteCategory(id);
     this.router.navigateByUrl('/categories');
