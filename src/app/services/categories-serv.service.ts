@@ -26,4 +26,12 @@ export class CategoriesServService {
 
     return findCAtegory;
   }
+
+  deleteCategory(id: number) {
+    this.categories.forEach((category, index) => {
+      if (category.id === id) {
+        this.categories.splice(index, 1);
+      }
+    });
+  }
 }

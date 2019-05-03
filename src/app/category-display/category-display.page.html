@@ -10,7 +10,7 @@
     <div>{{ category.description }}</div>
     <div>
       <ion-button color="primary" size="small">Modify</ion-button>
-      <ion-button color="danger" size="small">Delete</ion-button>
+      <ion-button color="danger" size="small"(click)="delete(category.id)">Delete</ion-button>
     </div>
   </div>
 </ion-content>
