@@ -16,7 +16,7 @@ export class CategoryDisplayPage implements OnInit {
 
   ngOnInit() {
     this.categoryId = Number(this.route.snapshot.paramMap.get('id'));
-    this.category = this.categoriesServ.getCategory(1);
+    this.category = this.categoriesServ.getCategory(this.categoryId);
   }
 
 }

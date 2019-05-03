@@ -16,12 +16,14 @@ export class CategoriesServService {
     return this.categories;
   }
 
-  getCategory(id: number): any {
+  getCategory(id: number): Category {
+    let findCAtegory: Category;
     this.categories.forEach(category => {
-      console.log(category.id);
       if (category.id === id) {
-        return category;
+        findCAtegory =  category;
       }
     });
+
+    return findCAtegory;
   }
 }
