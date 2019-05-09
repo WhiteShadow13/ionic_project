@@ -11,6 +11,7 @@ import { CategoriesServService } from '../services/categories-serv.service';
 export class CategoryModifyPage implements OnInit {
   public categoryId: number;
   public category: Category;
+  public newCategory: Category;
 
   constructor(private route: ActivatedRoute, 
               private categoriesServ: CategoriesServService, 
@@ -19,10 +20,13 @@ export class CategoryModifyPage implements OnInit {
   ngOnInit() {
     this.categoryId = Number(this.route.snapshot.paramMap.get('id'));
     this.category = this.categoriesServ.getCategory(this.categoryId);
+    this.newCategory = new Category(this.category.id, 
+                                    this.category.title, 
+                                    this.category.description);
   }
 
   modify() {
-    this.categoriesServ.postCategory(this.category);
+    this.categoriesServ.postCategory(this.newCategory);
     this.router.navigateByUrl('/categories');
   }
 
