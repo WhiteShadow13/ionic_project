@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { Category } from '../classes/category/category';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoriesServService } from '../services/categories-serv.service';
-import { Category } from '../classes/category/category';
 
 @Component({
-  selector: 'app-category-display',
-  templateUrl: './category-display.page.html',
-  styleUrls: ['./category-display.page.scss'],
+  selector: 'app-category-modify',
+  templateUrl: './category-modify.page.html',
+  styleUrls: ['./category-modify.page.scss'],
 })
-export class CategoryDisplayPage implements OnInit {
+export class CategoryModifyPage implements OnInit {
   public categoryId: number;
   public category: Category;
 
@@ -20,9 +20,10 @@ export class CategoryDisplayPage implements OnInit {
     this.categoryId = Number(this.route.snapshot.paramMap.get('id'));
     this.category = this.categoriesServ.getCategory(this.categoryId);
   }
-  
-  delete(id: number) {
-    this.categoriesServ.deleteCategory(id);
+
+  modify() {
+    this.categoriesServ.postCategory(this.category);
     this.router.navigateByUrl('/categories');
   }
+
 }

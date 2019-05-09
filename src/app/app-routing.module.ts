@@ -16,7 +16,9 @@ const routes: Routes = [
     loadChildren: './list/list.module#ListPageModule'
   },
   { path: 'categories', loadChildren: './categories/categories.module#CategoriesPageModule' },
-  { path: 'category-display/:id', loadChildren: './category-display/category-display.module#CategoryDisplayPageModule' }
+  { path: 'category-display/:id', loadChildren: './category-display/category-display.module#CategoryDisplayPageModule' },
+  { path: 'category-modify/:id', loadChildren: './category-modify/category-modify.module#CategoryModifyPageModule' }
+
 
 
 ];
