@@ -5,12 +5,17 @@
 </ion-header>
 
 <ion-content>
-  <div>
-    <div>{{ category.title }}</div>
-    <div>{{ category.description }}</div>
-    <div>
-      <ion-button color="primary" size="small" (click)="modify(category.id)">Modify</ion-button>
-      <ion-button color="danger" size="small"(click)="delete(category.id)">Delete</ion-button>
-    </div>
-  </div>
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ category.title }}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+          {{ category.description }}
+          <div>
+              <ion-button color="primary" size="small" (click)="modify(category.id)">Modify</ion-button>
+              <ion-button color="danger" size="small"(click)="delete(category.id)">Delete</ion-button>
+            </div>
+      </ion-card-content>
+    </ion-card>
 </ion-content>
