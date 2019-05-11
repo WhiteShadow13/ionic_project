@@ -6,16 +6,16 @@
 
 <ion-content>
   <ion-card>
-      <ion-card-header>
-        <ion-card-title>{{ category.title }}</ion-card-title>
-      </ion-card-header>
-    
-      <ion-card-content>
-          {{ category.description }}
-          <div>
-            <ion-button color="primary" size="small" [routerLink]="['/category-modify/', category.id]">Modify</ion-button>
-            <ion-button color="danger" size="small" (click)="delete(category.id)">Delete</ion-button>
-          </div>
-      </ion-card-content>
-    </ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ category.title }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+        {{ category.description }}
+        <div>
+          <ion-button color="primary" size="small" [routerLink]="['/category-modify/', category.id]">Modify</ion-button>
+          <ion-button color="danger" size="small" (click)="delete(category.id)">Delete</ion-button>
+        </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

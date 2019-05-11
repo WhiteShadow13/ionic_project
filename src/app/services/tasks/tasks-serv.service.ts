@@ -7,7 +7,7 @@ import { Category } from 'src/app/classes/category/category';
 })
 export class TasksServService {
   private tasks: Task[] = [
-    new Task(1, "Terminated the ionic app", "Test", 1),
+    new Task(1, "Terminated the ionic app", "desc", 1),
     new Task(2, "Test", "Test", 2)
   ]
 
