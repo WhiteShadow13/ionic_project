@@ -8,7 +8,9 @@
 </ion-header>
 
 <ion-content>
-  <div *ngFor="let category of categories" [routerLink]="['/category-display/', category.id]">
-    {{ category.title }}
-  </div>
+    <ion-card *ngFor="let category of categories" [routerLink]="['/category-display/', category.id]">
+      <ion-card-header>
+        <ion-card-title>{{ category.title }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
 </ion-content>
