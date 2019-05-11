@@ -19,7 +19,9 @@ const routes: Routes = [
   { path: 'category-display/:id', loadChildren: './category-display/category-display.module#CategoryDisplayPageModule' },
   { path: 'category-modify/:id', loadChildren: './category-modify/category-modify.module#CategoryModifyPageModule' },
   { path: 'tasks', loadChildren: './tasks/tasks.module#TasksPageModule' },
-  { path: 'task-display/:id', loadChildren: './task-display/task-display.module#TaskDisplayPageModule' }
+  { path: 'task-display/:id', loadChildren: './task-display/task-display.module#TaskDisplayPageModule' },
+  { path: 'task-modify/:id', loadChildren: './task-modify/task-modify.module#TaskModifyPageModule' }
+
 
 
 

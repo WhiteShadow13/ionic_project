@@ -11,11 +11,13 @@
     </ion-card-header>
   
     <ion-card-content>
-        {{ task.description }}
-        <div>
-          <ion-button color="primary" size="small" [routerLink]="['/task-modify/', task.id]">Modify</ion-button>
-          <ion-button color="danger" size="small" (click)="delete(task.id)">Delete</ion-button>
-        </div>
+      <div>{{ task.description }}</div>
+      
+      <ion-badge color="tertiary">{{ task.fkCategory.title }}</ion-badge>
+      <div>
+        <ion-button color="primary" size="small" [routerLink]="['/task-modify/', task.id]">Modify</ion-button>
+        <ion-button color="danger" size="small" (click)="delete(task.id)">Delete</ion-button>
+      </div>
     </ion-card-content>
   </ion-card>
 </ion-content>
