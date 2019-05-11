@@ -2,7 +2,7 @@ import { Category } from '../category/category';
 import { CategoriesServService } from 'src/app/services/categories-serv.service';
 
 export class Task {
-    private categoriesServ: CategoriesServService
+    private categoriesServ: CategoriesServService = new CategoriesServService();
     
     public id: number;
     public title: string;

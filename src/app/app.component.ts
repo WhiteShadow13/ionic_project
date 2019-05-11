@@ -19,6 +19,11 @@ export class AppComponent {
       title: 'Categories',
       url: '/categories',
       icon: 'md-clipboard'
+    },
+    {
+      title: 'Tasks',
+      url: '/tasks',
+      icon: 'md-book'
     }
   ];
 

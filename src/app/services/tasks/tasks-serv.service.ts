@@ -14,6 +14,7 @@ export class TasksServService {
   constructor() { }
 
   getTasks(): Task[] {
+    console.log(this.tasks);
     return this.tasks;
   }
 

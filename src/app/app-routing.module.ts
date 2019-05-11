@@ -17,7 +17,8 @@ const routes: Routes = [
   },
   { path: 'categories', loadChildren: './categories/categories.module#CategoriesPageModule' },
   { path: 'category-display/:id', loadChildren: './category-display/category-display.module#CategoryDisplayPageModule' },
-  { path: 'category-modify/:id', loadChildren: './category-modify/category-modify.module#CategoryModifyPageModule' }
+  { path: 'category-modify/:id', loadChildren: './category-modify/category-modify.module#CategoryModifyPageModule' },  { path: 'tasks', loadChildren: './tasks/tasks.module#TasksPageModule' }
+
 
 
 
