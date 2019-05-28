@@ -6,6 +6,7 @@ import { Category } from 'src/app/classes/category/category';
   providedIn: 'root'
 })
 export class TasksServService {
+  public lastId = 2;
   private tasks: Task[] = [
     new Task(1, "Terminated the ionic app", "desc", 1),
     new Task(2, "Test", "Test", 2)
@@ -35,6 +36,11 @@ export class TasksServService {
         this.tasks[index] = newTask;
       }
     });
+  }
+
+  putTask(newTask: Task) {
+    this.tasks.push(newTask);
+    this.lastId ++; 
   }
 
   deleteTask(id: number) {

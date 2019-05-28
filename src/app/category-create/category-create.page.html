@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>category-create</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Title</ion-label>
+    <ion-input [(ngModel)]="newCategory.title"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Description</ion-label>
+    <ion-textarea rows="5" [(ngModel)]="newCategory.description"></ion-textarea>
+  </ion-item>
+
+  <div>
+    <ion-button color="success" (click)="create()">Create</ion-button>
+    <ion-button color="danger" [routerLink]="['/categories']">Cancel</ion-button>
+  </div>
+</ion-content>

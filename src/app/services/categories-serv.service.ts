@@ -5,6 +5,8 @@ import { Category } from '../classes/category/category';
   providedIn: 'root'
 })
 export class CategoriesServService {
+  public lastId = 3;
+
   private categories: Category[] = [
     new Category(1, "Ecole", "Test"),
     new Category(2, "Perso", "Test"),
@@ -33,6 +35,11 @@ export class CategoriesServService {
         this.categories[index] = newCategory;
       }
     });
+  }
+
+  putCategory(newCategory: Category) {
+    this.categories.push(newCategory);
+    this.lastId ++; 
   }
 
   deleteCategory(id: number) {
